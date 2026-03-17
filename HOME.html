@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- 3 DOTs -->
+  <nav class="dot-nav">
+    <div class="dot-row">
+      <a href="HOME.html">
+        <div class="dot"></div>
+        <span class="nav-label">Home</span>
+      </a>
+    </div>
+    <div class="dot-row">
+      <a href="#">
+        <div class="dot"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <span class="nav-label">DIY</span>
+      </a>
+    </div>
+    <div class="dot-row">
+      <a href="#">
+        <div class="dot"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <span class="nav-label">References</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- YEAR GRID -->
+  <div class="grid-wrap">
+    <div class="year-grid">
+      <a class="year-cell" href="runway-89.html?year=89"><span>89</span></a>
+      <a class="year-cell" href="invoice-90.html"><span>90</span></a>
+      <a class="year-cell" href="runway-91.html?year=91"><span>91</span></a>
+      <a class="year-cell" href="runway-92.html?year=92"><span>92</span></a>
+      <a class="year-cell" href="runway-93.html?year=93"><span>93</span></a>
+      <a class="year-cell" href="runway-94.html?year=94"><span>94</span></a>
+      <a class="year-cell" href="runway-95.html?year=95"><span>95</span></a>
+      <a class="year-cell" href="runway-96.html?year=96"><span>96</span></a>
+    </div>
+  </div>
+
+<!-- Java Script-->
+  <script>
+    const cursor = document.getElementById('cursor');
+
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('.year-cell').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+    });
+  </script>
+</body>
+</html>
