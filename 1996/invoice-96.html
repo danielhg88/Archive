@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MM Research Invoice — Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div></div>
+ <!-- 3 DOTs -->
+  <nav class="dot-nav">
+    <div class="dot-row">
+      <a href="/Archive/HOME.html">
+        <div class="dot"></div>
+        <span class="nav-label">Home</span>
+      </a>
+    </div>
+    <div class="dot-row">
+      <a href="#">
+        <div class="dot"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <span class="nav-label">DIY</span>
+      </a>
+    </div>
+    <div class="dot-row">
+      <a href="#">
+        <div class="dot"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <div class="dot" style="margin-left:4px"></div>
+        <span class="nav-label">References</span>
+      </a>
+    </div>
+  </nav>
+<!-- ══════════════════════════
+     INVOICE PAGE
+══════════════════════════ -->
+<div class="page" id="invoice-page">
+  
+  <div class="invoice-wrap">
+
+    <!-- R1: Title | MM -->
+    <div class="inv-row">
+      <div class="inv-cell" style="flex:1; font-size:13px; font-weight:700; letter-spacing:.04em; display:flex; align-items:center;">
+        MM Research Invoice
+      </div>
+      <div class="inv-cell cell-logo">MM</div>
+    </div>
+
+    <!-- R2: Date | Ref # (clickable) -->
+    <div class="inv-row">
+      <div class="inv-cell" style="flex:1;">
+        <span class="inv-field-label">Date of Exploration</span>
+        <span id="inv-date" style="font-size:12px;">16/02/2026</span>
+      </div>
+      <div class="inv-cell" style="width:var(--col-r); flex-shrink:0;">
+        <span class="inv-field-label">Reference Links</span>
+        <button class="ref-link" onclick="goToRefs()">#RF1989BRST1997</button>
+      </div>
+    </div>
+
+    <!-- R3: Company | MM -->
+    <div class="inv-row">
+      <div class="inv-cell" style="flex:1;">
+        <span class="inv-field-label">Company Name</span>
+        <span style="font-size:12px;">Maison Margiela</span>
+      </div>
+      <div class="inv-cell cell-logo">MM</div>
+    </div>
+
+    <!-- R4: Address — fills remaining height -->
+    <div class="inv-row inv-addr-row">
+      <div class="inv-addr">
+        <span class="inv-field-label">About</span>
+        <span class="font-size 12px;">  The Spring/Summer 1996 collection arrived as one of Margiela's most visceral statements — the house sent models down the runway with their hands and feet painted entirely in red, the dye bleeding and transferring onto the white garments as they moved and touched surfaces throughout the show. It was less a fashion presentation than a live document of contamination, the clothes becoming records of bodies in motion. The red functioned as both wound and signature, collapsing the distance between maker and made, wearer and worn. Characteristically, no explanation was given.</div>
+    </div>
+
+    <!-- R5: Season | Country of Origin -->
+    <div class="inv-pair-row">
+      <div class="inv-pair-cell">
+        <span class="inv-field-label">Season of Goods</span>
+        <span class="v">S/S 1996</span>
+      </div>
+      <div class="inv-pair-cell">
+        <span class="inv-field-label">Country of Origin</span>
+        <span class="v">France</span>
+      </div>
+    </div>
+
+    <!-- R6: Description -->
+    <div class="inv-row inv-desc-row">
+      <div class="inv-desc-cell">
+        <span class="inv-field-label">Description of Goods</span>
+        Found imagery — runway documentation, press archive, ephemera.
+      </div>
+    </div>
+
+    <!-- CROOKED PORTRAIT IMAGE -->
+    <div class="inv-img-holder" id="img-holder" onclick="goToGallery()">
+      <div class="inv-img-inner">
+       <img src="/Archive/1996/1996/red-1.jpeg" alt="S/S 1990"/>
+        <div class="img-placeholder">
+          [ image ]<br/>
+          <span style="opacity:.3; font-size:9px;">click to explore</span>
+        </div>
+      </div>
+      <div class="click-hint">Click to explore ↗</div>
+    </div>
+
+  </div><!-- /invoice-wrap -->
+  <div class="img-overlay"></div>
+</div>
+
+
+<!-- ══════════════════════════
+     GALLERY PAGE
+══════════════════════════ -->
+<div class="page hidden" id="gallery-page">
+  <div class="gallery-wrap">
+    <div class="gallery-header">
+      <div>
+        <div class="gallery-title">S/S 1996 — Found Archive</div>
+        <div class="gallery-meta">
+          #RF1989BRST1997 &nbsp;·&nbsp; Maison Margiela &nbsp;·&nbsp;
+          <span id="img-count"></span> documents
+        </div>
+      </div>
+      <button class="back-btn" onclick="show('invoice-page')">← Return to Invoice</button>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</div>
+
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">Close ✕</span>
+  <img src="" alt="" id="lb-img" style="display:none;"/>
+  <div class="lb-caption" id="lb-cap"></div>
+</div>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+  function goToGallery() {
+    window.location.href = "archive-96.html";
+  }
+</script>
+</body>
+</html>

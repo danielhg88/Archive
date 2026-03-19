@@ -11,7 +11,7 @@
  <!-- 3 DOTs -->
   <nav class="dot-nav">
     <div class="dot-row">
-      <a href="HOME.html">
+      <a href="/Archive/HOME.html">
         <div class="dot"></div>
         <span class="nav-label">Home</span>
       </a>
@@ -71,11 +71,9 @@
     <!-- R4: Address — fills remaining height -->
     <div class="inv-row inv-addr-row">
       <div class="inv-addr">
-        <span class="inv-field-label">Address</span>
-        <span style="opacity:.4;">Street / Location</span><br/>
-        <span style="opacity:.4;">Postal Code</span><br/>
-        <span style="opacity:.4;">City</span><br/>
-        <span style="opacity:.4;">Country</span>
+        <span class="inv-field-label">About</span>
+        <span class="font-size 12px;"> Maison Martin Margiela Ready-to-Wear (SS 1993) Maison Margiela’s Spring/Summer 1993 collection exemplified his knack for transforming fashion norms. He hosted two simultaneous shows in the 18th arrondissement of Paris. 
+On an elementary playground, located in a North African neighborhood and the outskirts of Paris, Margiela would find his location. Days leading up, Margiela allowed the local children to design and send out 500 invitations to attendees. According to the Business of Fashion, the Margiela team planned to "put the kids on buses to the countryside [with an itinerary of activities] but couldn't due to budget restrictions." </span>
       </div>
     </div>
 
@@ -83,7 +81,7 @@
     <div class="inv-pair-row">
       <div class="inv-pair-cell">
         <span class="inv-field-label">Season of Goods</span>
-        <span class="v">S/S 1997</span>
+        <span class="v">S/S 1993</span>
       </div>
       <div class="inv-pair-cell">
         <span class="inv-field-label">Country of Origin</span>
@@ -102,7 +100,7 @@
     <!-- CROOKED PORTRAIT IMAGE -->
     <div class="inv-img-holder" id="img-holder" onclick="goToGallery()">
       <div class="inv-img-inner">
-       <img src="assets/1990/90-07.jpeg" alt="S/S 1990"/>
+       <img src="/Archive/Assets/1993/93-1.png" alt="S/S 1990"/>
         <div class="img-placeholder">
           [ image ]<br/>
           <span style="opacity:.3; font-size:9px;">click to explore</span>
@@ -123,7 +121,7 @@
   <div class="gallery-wrap">
     <div class="gallery-header">
       <div>
-        <div class="gallery-title">S/S 1997 — Found Archive</div>
+        <div class="gallery-title">S/S 1993 — Found Archive</div>
         <div class="gallery-meta">
           #RF1989BRST1997 &nbsp;·&nbsp; Maison Margiela &nbsp;·&nbsp;
           <span id="img-count"></span> documents
@@ -150,7 +148,9 @@
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
   });
-
+  function goToGallery() {
+    window.location.href = "archive-93.html";
+  }
 </script>
 </body>
 </html>
