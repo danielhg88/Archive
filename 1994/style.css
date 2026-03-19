@@ -85,60 +85,6 @@
       text-decoration: none;
     }
 
-    /* ── YEAR GRID ── */
-    .grid-wrap {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 22vh;
-    }
-
-    .year-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      border: 1.5px solid var(--black);
-      box-shadow: 5px 5px 0px var(--black);
-    }
-
-    .year-cell {
-      width: 160px; height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 48px;
-      font-weight: 400;
-      color: var(--black);
-      text-decoration: none;
-      position: relative;
-      transition: color 0.2s ease;
-      cursor: none;
-    }
-
-    .year-cell::before {
-      content: '';
-      position: absolute;
-      width: 74px; height: 74px;
-      border-radius: 50%;
-      border: 2.2px solid var(--black);
-      opacity: 0;
-      transform: scale(0.85);
-      transition: opacity 0.2s ease, transform 0.25s ease;
-    }
-
-    .year-cell:hover::before {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .year-cell span {
-      position: relative;
-      z-index: 1;
-    }
-
     /* year label bottom right */
     .page-label {
       position: fixed;
