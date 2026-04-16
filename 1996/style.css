@@ -177,17 +177,7 @@ html, body {
   letter-spacing: 0.08em; display: block; margin-bottom: 5px;
 }
 
-/* clickable ref # */
-.ref-link {
-  font-size: 12px; color: var(--black);
-  text-decoration: none; letter-spacing: 0.02em;
-  border-bottom: 1px solid transparent;
-  cursor: pointer; display: inline-block;
-  transition: border-color 0.2s, color 0.2s;
-  background: none; font-family: var(--mono);
-  padding: 0;
-}
-.ref-link:hover { border-bottom-color: var(--black); color: var(--accent); }
+
 
 /* address row — flex:1 fills remaining height */
 .inv-addr-row { flex: 1; overflow: hidden; }
@@ -204,99 +194,4 @@ html, body {
 
 .inv-desc-row { flex-shrink: 0; }
 .inv-desc-cell { padding: 12px 14px; font-size: 11px; color: #555; line-height: 1.9; }
-
-
-/* ─── CROOKED PORTRAIT IMAGE ─── */
-.inv-img-holder {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  width: var(--img-w);
-  height: var(--img-h);
-  background: var(--black);
-  cursor: pointer;
-  z-index: 20;
-  transform: rotate(3.5deg);
-  transform-origin: top right;
-}
-
-.inv-img-inner {
-  width: 100%; height: 100%;
-  background: var(--black);
-  overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-}
-.inv-img-inner img {
-  width: 100%; height: 100%; object-fit: cover;
-  opacity: 0.82; transition: opacity 0.4s;
-}
-.img-placeholder {
-  color: #2e2e2e; font-size: 10px; letter-spacing: 0.15em;
-  text-transform: uppercase; text-align: center; line-height: 2.3;
-  user-select: none;
-}
-
-/* hover → straighten + zoom to center */
-.inv-img-holder:hover {
-  position: fixed;
-  top: 50%; right: auto; left: 50%;
-  width: 340px; height: 480px;
-  transform: translate(-50%, -50%) rotate(0deg);
-  z-index: 100;
-  box-shadow: 0 40px 120px rgba(0,0,0,0.65);
-  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1),
-              width    0.5s cubic-bezier(0.16,1,0.3,1),
-              height   0.5s cubic-bezier(0.16,1,0.3,1),
-              top      0.5s cubic-bezier(0.16,1,0.3,1),
-              left     0.5s cubic-bezier(0.16,1,0.3,1),
-              box-shadow 0.5s ease;
-}
-.inv-img-holder:hover .inv-img-inner img { opacity: 1; }
-
-.click-hint {
-  position: absolute; bottom: 14px; left: 0; right: 0;
-  text-align: center; font-size: 9px; letter-spacing: 0.22em;
-  text-transform: uppercase; color: rgba(255,255,255,0.45);
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.3s ease 0.1s;
-}
-.inv-img-holder:hover .click-hint { opacity: 1; }
-
-/* dim overlay */
-.img-overlay {
-  position: fixed; inset: 0;
-  background: rgba(244,244,242,0.82);
-  backdrop-filter: blur(3px);
-  z-index: 99;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-body:has(.inv-img-holder:hover) .img-overlay { opacity: 1; }
-
-
-/* ════════════════════════════════
-   LIGHTBOX
-════════════════════════════════ */
-.lightbox {
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.92);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity 0.3s;
-}
-.lightbox.active { opacity: 1; pointer-events: all; }
-.lightbox img { max-width: 85vw; max-height: 88vh; object-fit: contain; }
-
-.lightbox-close {
-  position: absolute; top: 24px; right: 32px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.5); cursor: pointer;
-  text-transform: uppercase; transition: color 0.2s;
-}
-.lightbox-close:hover { color: #fff; }
-
-.lb-caption {
-  position: absolute; bottom: 24px; left: 0; right: 0;
-  text-align: center; font-size: 9px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: rgba(255,255,255,0.35);
-}
 

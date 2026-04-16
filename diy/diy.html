@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MM Research Invoice — S/S 1996</title>
+  <title>MM Research Invoice — S/S 1989</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -62,66 +62,7 @@
       color: var(--black); opacity: 0; margin-left: 8px;
       transition: opacity .2s; white-space: nowrap;
     }
-    .dot-row a:hover .nav-label { opacity: 1; }
-
-    /* ══════════════════════════════════
-       INVOICE
-    ══════════════════════════════════ */
-    #invoice-section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px 80px;
-    }
-
-    .invoice-wrap {
-      width: min(480px, 92%);
-      aspect-ratio: 8.5 / 11;
-      display: flex;
-       flex-direction: column;
-      border: 1px solid var(--black);
-      background: var(--bg);
-      position: relative;
-    }
-
-    .inv-row { display: flex; border-bottom: 1px solid var(--black); }
-    .inv-cell { padding: 8px 10px; }
-    .inv-cell + .inv-cell { border-left: 1px solid var(--black); }
-    .cell-logo {
-      width: var(--col-r); flex-shrink: 0;
-      font-size: 18px; font-weight: 700; letter-spacing: .08em;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .inv-field-label {
-      display: block; font-size: 8px; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--mid); margin-bottom: 3px;
-    }
-    .inv-addr-row { min-height: 80px; }
-    .inv-addr { flex: 1; padding: 8px 10px; font-size: 11px; line-height: 1.65; }
-    .inv-pair-row { display: flex; border-bottom: 1px solid var(--black); }
-    .inv-pair-cell { flex: 1; padding: 8px 10px; display: flex; flex-direction: column; }
-    .inv-pair-cell + .inv-pair-cell { border-left: 1px solid var(--black); }
-    .inv-pair-cell .v { font-size: 12px; }
-    .inv-desc-row { border-bottom: 1px solid var(--black); }
-    .inv-desc-cell { flex: 1; padding: 8px 10px; font-size: 11px; line-height: 1.5; }
-    .ref-link {
-      font-family: 'Courier Prime', monospace; font-size: 11px;
-      color: var(--black); background: none; border: none;
-      cursor: pointer; padding: 0;
-      text-decoration: underline; text-underline-offset: 3px;
-    }
-
-    .inv-hint-row { padding: 8px 10px; }
-    .inv-scroll-hint {
-      font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--mid);
-    }
-
-    /* ══════════════════════════════════
-       ARCHIVE
-    ══════════════════════════════════ */
-    #archive-section {
+    .dot-row a:hover .nav-label { opacity: 1; }#archive-section {
       background: var(--bg);
     }
 
@@ -216,98 +157,23 @@
 
 <div class="cursor" id="cursor"></div>
 
-<nav class="dot-nav">
-  <div class="dot-row">
-    <a href="/Archive/index.html"><div class="dot"></div><span class="nav-label">Home</span></a>
-  </div>
-  <div class="dot-row">
-    <a href="#"><div class="dot"></div><div class="dot" style="margin-left:4px"></div><span class="nav-label">DIY</span></a>
-  </div>
-  <div class="dot-row">
-    <a href="#"><div class="dot"></div><div class="dot" style="margin-left:4px"></div><div class="dot" style="margin-left:4px"></div><span class="nav-label">References</span></a>
-  </div>
-</nav>
-
-<!-- ══ INVOICE ══ -->
-<section id="invoice-section">
-  <div class="invoice-wrap">
-
-    <div class="inv-row">
-      <div class="inv-cell" style="flex:1;font-size:13px;font-weight:700;letter-spacing:.04em;display:flex;align-items:center;">
-        MM Research Invoice
-      </div>
-      <div class="inv-cell cell-logo">MM</div>
-    </div>
-
-    <div class="inv-row">
-      <div class="inv-cell" style="flex:1;">
-        <span class="inv-field-label">Date of Exploration</span>
-        <span style="font-size:12px;">16/02/2026</span>
-      </div>
-      <div class="inv-cell" style="width:var(--col-r);flex-shrink:0;">
-        <span class="inv-field-label">Reference Links</span>
-        <button class="ref-link">#RF1989BRST1997</button>
-      </div>
-    </div>
-
-    <div class="inv-row">
-      <div class="inv-cell" style="flex:1;">
-        <span class="inv-field-label">Company Name</span>
-        <span style="font-size:12px;">Maison Margiela</span>
-      </div>
-      <div class="inv-cell cell-logo">MM</div>
-    </div>
-
-    <div class="inv-row inv-addr-row">
-      <div class="inv-addr">
-        <span class="inv-field-label">About</span>
-        The Spring/Summer 1996 collection arrived as one of Margiela's most visceral statements — the house sent models down the runway with their hands and feet painted entirely in red, the dye bleeding and transferring onto the white garments as they moved and touched surfaces throughout the show. It was less a fashion presentation than a live document of contamination, the clothes becoming records of bodies in motion. Characteristically, no explanation was given.
-      </div>
-    </div>
-
-    <div class="inv-pair-row">
-      <div class="inv-pair-cell">
-        <span class="inv-field-label">Season of Goods</span>
-        <span class="v">S/S 1996</span>
-      </div>
-      <div class="inv-pair-cell">
-        <span class="inv-field-label">Country of Origin</span>
-        <span class="v">France</span>
-      </div>
-    </div>
-
-    <div class="inv-row inv-desc-row">
-      <div class="inv-desc-cell">
-        <span class="inv-field-label">Description of Goods</span>
-        Found imagery — runway documentation, press archive, ephemera.
-      </div>
-    </div>
-
-    <div class="inv-hint-row">
-      <span class="inv-scroll-hint">↓ scroll to explore archive</span>
-    </div>
-    
-
-  </div>
-</section>
-
 <!-- ══ ARCHIVE ══ -->
 <section id="archive-section">
   <div class="archive-header">
     <div>
-      <div class="archive-title">S/S 1996 — Found Archive</div>
+      <div class="archive-title">Maison Margiela Sock Sweater Tutorial</div>
       <div class="archive-meta">
-        #RF1989BRST1997<span class="sep">·</span>Maison Margiela<span class="sep">·</span>12 documents
+        
       </div>
     </div>
-    <a class="return-btn" href="#invoice-section">← Return to Invoice</a>
+    <a class="return-btn" href="/Archive/index.html">← Return to Home Page</a>
   </div>
 
   <main class="feed" id="feed"></main>
 
   <footer class="archive-footer">
-    <span>Found Archive — Maison Margiela S/S 1996</span>
-    <span>12 / 12 documents</span>
+    <span>Sock Sweater Tutorial</span>
+    <span></span>
   </footer>
 </section>
 
@@ -321,23 +187,11 @@
 
   /* archive data */
   const images = [
-    '1996/red-1.jpeg','1996/red-2.jpeg','1996/red-3.jpeg','1996/red-4.jpeg',
-    '1996/red-5.jpeg','1996/red-6.jpg', '1996/red-7.jpg', '1996/red-8.jpg',
-    '1996/red-9.jpeg','1996/red-10.jpeg','1996/red-11.jpeg','1996/red-12.jpeg',
+    '/Archive/diy/pdiy/diy-01.jpg','/Archive/diy/pdiy/diy-02.jpg',
+    '/Archive/diy/pdiy/diy-03.jpg' , '/Archive/diy/pdiy/diy-04.jpg', '/Archive/diy/pdiy/diy-05.jpg', '/Archive/diy/pdiy/diy-06.jpg'
   ];
   const captions = [
-    'Runway documentation, red-stained hands on white fabric.',
-    'Close detail — dye transfer on garment surface.',
-    'Model in motion, contamination spreading.',
-    'Press archive — backstage preparation.',
-    'Runway overview, S/S 1996.',
-    'Red feet on white floor, trace left behind.',
-    'Garment detail post-show.',
-    'Ephemera — invitation and press materials.',
-    'Backstage documentation.',
-    'Full look, dye fully bled into cloth.',
-    'Archive photograph — exit from runway.',
-    'Found press image, original source unknown.',
+    
   ];
   const patterns = [
     'portrait','portrait','landscape','portrait',
