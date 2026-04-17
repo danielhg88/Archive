@@ -1,0 +1,85 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f5f3;
+      --mid: #888;
+   --off-white: #f4f4f2;
+  --mid: #888;
+  --border: #111;
+
+  --accent: #000;
+  --transparent: transparent;
+
+  --mono: 'Courier Prime', 'Courier New', monospace;
+
+  --inv-w: 638px;
+  --inv-h: 680px;
+  --img-w: 228px;
+  --img-h: 380px;
+  --col-r: 319px;
+}
+   
+
+
+
+    html, body {
+      width: 100%; height: 100%;
+      background: var(--white);
+      color: var(--black);
+      font-family: 'EB Garamond', serif;
+      overflow: hidden;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      position: fixed;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--transparent);
+      border: 2px solid var(--black);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    }
+    
+
+
+html, body {
+  width: 100%; height: 100%;
+  background: var(--off-white);
+  font-family: var(--mono);
+  overflow: hidden;
+}
+
+
+.about-wrap {
+  position: absolute !important;
+  top: 60% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+
+  max-width: 480px !important;
+  width: 100% !important;
+}
+
+.about-label {
+  font-size: 9px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+.about-text {
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
