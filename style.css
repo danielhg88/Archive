@@ -173,7 +173,7 @@ html, body {
 .about-wrap {
   max-width: 480px;
   margin: 0px auto 0;
-  padding: 500px 20px 60px;
+  padding: 520px 20px 60px;
   display: flex;
   flex-direction: column;
   gap: 10px;
